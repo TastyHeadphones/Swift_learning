@@ -17,9 +17,9 @@ class ViewController: UIViewController {
                                UIColor.yellow.cgColor,
                                UIColor.green.cgColor,
                                UIColor.blue.cgColor]
-        gradientLayer.transform = CATransform3DMakeRotation(CGFloat.pi / 2, 0, 0, 1)
-        
-        view.addSubview(gradientLayer)
+//        gradientLayer.transform = CATransform3DMakeRotation(CGFloat.pi / 2, 0, 0, 1)
+        gradientLayer.frame.size = view.frame.size
+        view.layer.insertSublayer(gradientLayer,at: 0)
 //        let firstFrame = CGRect(x: 160, y: 240, width: 100, height: 150)
 //        let firstView = UIView(frame: firstFrame)
 //        firstView.backgroundColor = .blue
@@ -30,8 +30,8 @@ class ViewController: UIViewController {
 //        
 //        firstView.addSubview(secondView)
 //        view.addSubview(firstView)
-        
-        
+
+//
         
 //        view.addSubview(secondView)
         // Do any additional setup after loading the view.
