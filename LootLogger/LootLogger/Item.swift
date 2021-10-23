@@ -7,13 +7,18 @@
 
 import UIKit
 
-class Item : Equatable{
+class Item : Equatable , Codable ,Comparable{
     static func == (lhs: Item, rhs: Item) -> Bool {
         return lhs.valueInDollars == rhs.valueInDollars
         && lhs.dateCreated == rhs.dateCreated
         && lhs.serialNumber == rhs.serialNumber
         && lhs.name == rhs.name
     }
+    
+    static func < (lhs: Item, rhs: Item) -> Bool {
+        return lhs.valueInDollars < rhs.valueInDollars
+    }
+    
     
     var name:String
     var valueInDollars:Int
