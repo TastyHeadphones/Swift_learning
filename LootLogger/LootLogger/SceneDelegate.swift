@@ -20,7 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let itemStore = ItemStore()
         
-        let itemController = window!.rootViewController as! ItemsViewController
+        let navController = window!.rootViewController as! UINavigationController
+        let itemController = navController.topViewController as! ItemsViewController
         
         itemController.itemStore = itemStore
     }
