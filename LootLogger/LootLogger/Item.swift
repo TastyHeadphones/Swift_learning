@@ -24,6 +24,7 @@ class Item : Equatable , Codable ,Comparable{
     var valueInDollars:Int
     var serialNumber:String?
     let dateCreated:Date
+    let itemKey: String
     
     init(name:String,valueInDollars:Int,serialNumber:String?)
     {
@@ -31,6 +32,7 @@ class Item : Equatable , Codable ,Comparable{
         self.valueInDollars = valueInDollars
         self.serialNumber = serialNumber
         self.dateCreated = Date()
+        self.itemKey = UUID().uuidString
     }
     
     convenience init(random: Bool = false) {

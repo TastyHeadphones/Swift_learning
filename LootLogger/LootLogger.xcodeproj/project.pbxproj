@@ -17,6 +17,7 @@
 		37A7C95E270B53920066EE9E /* LootLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A7C95D270B53920066EE9E /* LootLoggerTests.swift */; };
 		37A7C968270B53920066EE9E /* LootLoggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A7C967270B53920066EE9E /* LootLoggerUITests.swift */; };
 		37A7C96A270B53920066EE9E /* LootLoggerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A7C969270B53920066EE9E /* LootLoggerUITestsLaunchTests.swift */; };
+		37D7A4EF2725AACF008FC905 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D7A4EE2725AACF008FC905 /* ImageStore.swift */; };
 		37EA853D270C82AC00DA01F1 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA853C270C82AC00DA01F1 /* ItemsViewController.swift */; };
 		37EA853F270D509000DA01F1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA853E270D508F00DA01F1 /* Item.swift */; };
 		37EA8541270F3DB500DA01F1 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA8540270F3DB500DA01F1 /* ItemStore.swift */; };
@@ -54,6 +55,7 @@
 		37A7C963270B53920066EE9E /* LootLoggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LootLoggerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A7C967270B53920066EE9E /* LootLoggerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootLoggerUITests.swift; sourceTree = "<group>"; };
 		37A7C969270B53920066EE9E /* LootLoggerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootLoggerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		37D7A4EE2725AACF008FC905 /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		37EA853C270C82AC00DA01F1 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		37EA853E270D508F00DA01F1 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		37EA8540270F3DB500DA01F1 /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				37EA853C270C82AC00DA01F1 /* ItemsViewController.swift */,
 				37A7C94C270B53910066EE9E /* Main.storyboard */,
 				379B69C8271E5DDC00BEAC87 /* DetailViewController.swift */,
+				37D7A4EE2725AACF008FC905 /* ImageStore.swift */,
 				379FF55927158A73001725E1 /* ItemCell.swift */,
 				37A7C94F270B53920066EE9E /* Assets.xcassets */,
 				37A7C951270B53920066EE9E /* LaunchScreen.storyboard */,
@@ -273,6 +276,7 @@
 				37EA853F270D509000DA01F1 /* Item.swift in Sources */,
 				37EA8541270F3DB500DA01F1 /* ItemStore.swift in Sources */,
 				379FF55A27158A73001725E1 /* ItemCell.swift in Sources */,
+				37D7A4EF2725AACF008FC905 /* ImageStore.swift in Sources */,
 				37EA853D270C82AC00DA01F1 /* ItemsViewController.swift in Sources */,
 				37A7C947270B53910066EE9E /* AppDelegate.swift in Sources */,
 				37A7C949270B53910066EE9E /* SceneDelegate.swift in Sources */,
@@ -458,6 +462,7 @@
 				DEVELOPMENT_TEAM = 4WN46VZ7RJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LootLogger/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Use the photo to give detail";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -486,6 +491,7 @@
 				DEVELOPMENT_TEAM = 4WN46VZ7RJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LootLogger/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Use the photo to give detail";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
