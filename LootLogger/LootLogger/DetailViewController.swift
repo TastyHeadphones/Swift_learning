@@ -123,4 +123,13 @@ class DetailViewController: UIViewController,UITextFieldDelegate,UINavigationCon
         
         present(alertController, animated: true, completion: {print("alertController show")})
     }
+    
+    @IBAction  func deletePhoto(_ sender: UIBarButtonItem) {
+        let key = item.itemKey
+        if ((imageView.image) != nil){
+            imageView.image = nil
+            imageStore.deleteImage(forKey: key)
+        }
+        
+    }
 }
