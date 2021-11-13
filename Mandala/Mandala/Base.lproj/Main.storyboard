@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mood Selection View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MoodSelectionViewController" customModule="Mandala" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L9c-kk-Trp">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <segue destination="ghv-6K-9X2" kind="embed" identifier="embedContainerViewController" id="ZVI-jZ-3Z9"/>
+                                </connections>
+                            </containerView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CCR-fR-RLK">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="8Rx-Db-YlG">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="nBN-mt-UXP">
+                                            <rect key="frame" x="0.0" y="8" width="414" height="21"/>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="nBN-mt-UXP" firstAttribute="leadingMargin" secondItem="8Rx-Db-YlG" secondAttribute="leading" id="Rda-AN-8zr"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="nBN-mt-UXP" secondAttribute="bottom" constant="-8" id="V3M-x2-Abb"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="nBN-mt-UXP" secondAttribute="trailing" constant="-8" id="qbp-cU-JhZ"/>
+                                        <constraint firstItem="nBN-mt-UXP" firstAttribute="top" secondItem="8Rx-Db-YlG" secondAttribute="top" constant="8" id="yRw-UO-8YE"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vqp-Bw-TGN">
+                                <rect key="frame" x="103.5" y="716" width="207" height="31"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="QgV-uS-yv8"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add Mood"/>
+                                <connections>
+                                    <action selector="addMoodTappedWith_sender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="piu-Lc-008"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vqp-Bw-TGN" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.5" id="2PR-Dz-EcW"/>
+                            <constraint firstItem="L9c-kk-Trp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5LK-9v-bq8"/>
+                            <constraint firstItem="L9c-kk-Trp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BMf-f1-fjz"/>
+                            <constraint firstItem="CCR-fR-RLK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ooi-MK-CoW"/>
+                            <constraint firstItem="CCR-fR-RLK" firstAttribute="top" secondItem="Vqp-Bw-TGN" secondAttribute="bottom" constant="20" id="i38-Ql-Ci1"/>
+                            <constraint firstItem="CCR-fR-RLK" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="jdn-rR-CiM"/>
+                            <constraint firstItem="Vqp-Bw-TGN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rpv-g0-pct"/>
+                            <constraint firstAttribute="bottom" secondItem="L9c-kk-Trp" secondAttribute="bottom" id="sXV-JQ-Z6D"/>
+                            <constraint firstAttribute="trailing" secondItem="L9c-kk-Trp" secondAttribute="trailing" id="toc-Cx-96i"/>
+                            <constraint firstItem="CCR-fR-RLK" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="vS6-B9-Ca9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addMoodButton" destination="Vqp-Bw-TGN" id="gY7-cD-bhJ"/>
+                        <outlet property="stackView" destination="nBN-mt-UXP" id="yZ1-AC-emq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-552" y="118"/>
+        </scene>
+        <!--Mood List View Controller-->
+        <scene sceneID="gGX-jR-rES">
+            <objects>
+                <tableViewController id="ghv-6K-9X2" customClass="MoodListViewController" customModule="Mandala" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Kv2-Yj-SvD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="UITableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="KKi-ac-qVu">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KKi-ac-qVu" id="o9D-6K-cTQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ghv-6K-9X2" id="7xG-k5-a2o"/>
+                            <outlet property="delegate" destination="ghv-6K-9X2" id="eLe-G2-4zQ"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2HY-pB-Xhf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="506" y="118"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
