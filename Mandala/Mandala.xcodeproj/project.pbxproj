@@ -22,6 +22,7 @@
 		37901BE5272E8DCE00970103 /* UIImage+Mandala.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37901BE4272E8DCE00970103 /* UIImage+Mandala.swift */; };
 		37DC1CF8273A02E100EB54FD /* MoodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC1CF7273A02E100EB54FD /* MoodListViewController.swift */; };
 		37DC1CFA273B589200EB54FD /* MoodsConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC1CF9273B589200EB54FD /* MoodsConfigurable.swift */; };
+		37DC1CFC273FAED700EB54FD /* ImageSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC1CFB273FAED700EB54FD /* ImageSelector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		37901BE4272E8DCE00970103 /* UIImage+Mandala.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Mandala.swift"; sourceTree = "<group>"; };
 		37DC1CF7273A02E100EB54FD /* MoodListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodListViewController.swift; sourceTree = "<group>"; };
 		37DC1CF9273B589200EB54FD /* MoodsConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodsConfigurable.swift; sourceTree = "<group>"; };
+		37DC1CFB273FAED700EB54FD /* ImageSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				37901BAE272E7E7300970103 /* MoodSelectionViewController.swift */,
 				37DC1CF7273A02E100EB54FD /* MoodListViewController.swift */,
 				37901BB0272E7E7300970103 /* Main.storyboard */,
+				37DC1CFB273FAED700EB54FD /* ImageSelector.swift */,
 				37DC1CF9273B589200EB54FD /* MoodsConfigurable.swift */,
 				37901BB3272E7E7400970103 /* Assets.xcassets */,
 				37901BB5272E7E7400970103 /* LaunchScreen.storyboard */,
@@ -284,6 +287,7 @@
 				37901BAB272E7E7300970103 /* AppDelegate.swift in Sources */,
 				37901BE1272E8CC700970103 /* UIColor+Mandala.swift in Sources */,
 				37901BE5272E8DCE00970103 /* UIImage+Mandala.swift in Sources */,
+				37DC1CFC273FAED700EB54FD /* ImageSelector.swift in Sources */,
 				37901BAD272E7E7300970103 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
