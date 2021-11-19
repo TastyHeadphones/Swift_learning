@@ -117,7 +117,9 @@ class ImageSelector: UIControl{
     }()
     
     func changehighlightViewBackgroundColor(_ color: UIColor) -> Void{
-        highlightView.backgroundColor = color
+        let colorAnimator = UIViewPropertyAnimator(duration: 0.3, dampingRatio: 0.7, animations: {self.highlightView.backgroundColor = color})
+        colorAnimator.startAnimation()
+//        self.highlightView.backgroundColor = color
     }
     
     private var highlightViewXConstraint: NSLayoutConstraint!{
