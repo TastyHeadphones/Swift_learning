@@ -22,22 +22,23 @@ class PhotosViewController: UIViewController,UICollectionViewDelegate {
         collctionView.delegate = self
         // Do any additional setup after loading the view.
         //        store.fetchInterstingPhotos()
+        updateDataSource()
         store.fetchInterstingPhotos{
             (photoResult) in
             
-            switch photoResult{
-            case let .success(photos):
-                print("Successfully found \(photos.count) photos.")
-//                if let firstPhoto = photos.first {
-//                    self.updateImageView(for: firstPhoto)
-//                }
-                self.photoDataSource.photos = photos
-            case let .failure(error):
-                print("Error fetching interesting photos: \(error)")
-                self.photoDataSource.photos.removeAll()
-            }
-            self.collctionView.reloadSections(IndexSet(integer: 0))
-            
+//            switch photoResult{
+//            case let .success(photos):
+//                print("Successfully found \(photos.count) photos.")
+////                if let firstPhoto = photos.first {
+////                    self.updateImageView(for: firstPhoto)
+////                }
+//                self.photoDataSource.photos = photos
+//            case let .failure(error):
+//                print("Error fetching interesting photos: \(error)")
+//                self.photoDataSource.photos.removeAll()
+//            }
+//            self.collctionView.reloadSections(IndexSet(integer: 0))
+            self.updateDataSource()
         }
         
     }
@@ -73,8 +74,37 @@ class PhotosViewController: UIViewController,UICollectionViewDelegate {
             }
             
         }
-        
-        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "showPhoto"?:
+            if let selectedIndexPath =
+                collctionView.indexPathsForSelectedItems?.first {
+
+                let photo = photoDataSource.photos[selectedIndexPath.row]
+
+                let destinationVC = segue.destination as! PhotoInfoViewController
+                destinationVC.photo = photo
+                destinationVC.store = store
+            }
+        default:
+            preconditionFailure("Unexpected segue identifier.")
+        }
+    }
+    
+    private func updateDataSource(){
+        store.fetchAllPhotos{
+            (photoResult) in
+            
+            switch photoResult{
+            case let .success(photos):
+                self.photoDataSource.photos = photos
+            case .failure:
+                self.photoDataSource.photos.removeAll()
+            }
+            self.collctionView.reloadSections(IndexSet(integer: 0))
+        }
     }
     
 }
